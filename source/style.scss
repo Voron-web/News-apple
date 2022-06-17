@@ -1,0 +1,107 @@
+@import "res.scss";
+
+@font-face {
+   font-family: "Roboto";
+   src: url("../fonts/Roboto-Regular.eot");
+   src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"),
+      url("../fonts/Roboto-Regular.ttf") format("truetype");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Roboto";
+   src: url("../fonts/Roboto-Bold.eot");
+   src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"),
+      url("../fonts/Roboto-Bold.ttf") format("truetype");
+   font-weight: bold;
+   font-style: normal;
+}
+body {
+   font-family: "Roboto";
+}
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   min-height: 100%;
+}
+.width-limit {
+   max-width: 1150px;
+   margin: 0 auto;
+}
+main {
+   flex: 1 1 100%;
+}
+
+////////////////////////////////
+.burger {
+   display: none;
+   color: #fff;
+   // display: flex;
+
+   &__button {
+      position: relative;
+      margin: 0 15px 0 0;
+      width: 15px;
+      height: 15px;
+      & div {
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         background-color: #fff;
+         left: 0;
+      }
+      & div:first-child {
+         top: 1px;
+      }
+      & div:nth-child(2) {
+         top: 50%;
+         transform: translate(0, -25%);
+      }
+      & div:last-child {
+         bottom: 1px;
+      }
+   }
+}
+.header {
+   &__logo {
+      background-image: linear-gradient(90deg, #fd4f18 30%, #f79d16 100%);
+      height: 77px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__navigation {
+      background-color: #222;
+      height: 60px;
+      padding: 0 10px;
+   }
+
+   &__menu {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: 15px;
+      & a {
+         color: #fff;
+      }
+      & ul {
+         flex: 1 1 100%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+      & svg {
+         // padding: 0 0 0 30px;
+         fill: #fff;
+      }
+   }
+   &__search {
+      margin: 0 0 0 45px;
+   }
+}
