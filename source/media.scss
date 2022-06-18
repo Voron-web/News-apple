@@ -108,6 +108,48 @@
          }
       }
    }
+
+   .content {
+      flex-direction: column;
+   }
+   .main-news {
+      margin: 0;
+      &__title {
+         & h1 {
+            font-size: 23px;
+         }
+      }
+      &__author {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+   .author {
+      &__avatar {
+         padding: 0 0 0 20px;
+      }
+      &__content {
+         margin: 10px 0 0 0;
+      }
+   }
+   .aside-card {
+      & span {
+         padding: 0 0 0 5px;
+      }
+   }
+
+   .latest-news {
+      margin: 20px 0 0 0;
+      &__img {
+         flex: 0 0 15%;
+      }
+   }
+   .deals {
+      margin: 20px 0 0 0;
+      &__img {
+         flex: 0 0 15%;
+      }
+   }
 }
 
 @media (max-width: 675px) {
