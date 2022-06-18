@@ -25,6 +25,7 @@ body {
    background-color: #f7f7f7;
 }
 .wrapper {
+   // width: max-content;
    display: flex;
    flex-direction: column;
    justify-content: start;
@@ -100,21 +101,21 @@ h2 {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       font-size: 15px;
       & a {
          color: #fff;
       }
-      & ul {
-         flex: 1 1 100%;
-         display: flex;
-         align-items: center;
-         justify-content: space-around;
-      }
+
       & svg {
          // padding: 0 0 0 30px;
          fill: #fff;
       }
+   }
+   &__menu-list {
+      flex: 1 1 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
    }
    &__search {
       margin: 0 20px 0 45px;
@@ -131,7 +132,6 @@ h2 {
    flex-direction: column;
    &__card {
       padding: 30px;
-
       display: flex;
       background-color: #fff;
       margin: 20px 0 0 0;
@@ -229,14 +229,21 @@ h2 {
          text-decoration: none;
       }
    }
-
+   &__card-window {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+   }
    &__cards {
+      position: absolute;
+      top: 0;
       display: flex;
       justify-content: space-between;
    }
 
    &__card {
-      position: relative; // width: 160px;
+      position: relative;
       height: 240px;
       max-width: 160px;
       // flex: 0 0 20%;
@@ -275,7 +282,7 @@ h2 {
 .footer {
    padding: 20px;
    background-color: #0c0c0c;
-   // width: 100%;
+   width: 100vw;
    margin: 25px 0 0 0;
    &__content {
       margin: 0 auto;
@@ -339,9 +346,6 @@ h2 {
       line-height: 1.5;
    }
 }
-// * {
-//    border: 1px solid red;
-// }
 
 .content {
    display: flex;
@@ -487,4 +491,9 @@ h2 {
    &__img {
       flex: 0 0 24%;
    }
+}
+@import "media.scss";
+
+* {
+   // border: 1px solid red;
 }
